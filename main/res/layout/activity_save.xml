@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.pedram.movietime.PlaceTime">
+
+    <TextView android:text="@string/prompt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#ff60adff"
+        android:textSize="20dp"
+        android:id="@+id/txtPrompt"
+        android:layout_marginTop="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtDate"
+        android:id="@+id/txtDate"
+        android:inputType="date"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btnDate"
+        android:layout_alignLeft="@+id/txtTime"
+        android:layout_alignStart="@+id/txtTime" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtDate"
+        android:id="@+id/btnDate"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/txtTime"
+        android:layout_toEndOf="@+id/txtTime" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTime"
+        android:id="@+id/txtTime"
+        android:inputType="time"
+        android:layout_below="@+id/btnDate"
+        android:layout_alignLeft="@+id/btnReserve"
+        android:layout_alignStart="@+id/btnReserve"
+        android:layout_toLeftOf="@+id/btnTime"
+        android:layout_toStartOf="@+id/btnTime" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTime"
+        android:id="@+id/btnTime"
+        android:layout_below="@+id/btnDate"
+        android:layout_alignRight="@+id/btnReserve"
+        android:layout_alignEnd="@+id/btnReserve" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strReserve"
+        android:id="@+id/btnReserve"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_alignRight="@+id/txtPrompt"
+        android:layout_alignEnd="@+id/txtPrompt"
+        android:layout_alignLeft="@+id/txtPrompt"
+        android:layout_alignStart="@+id/txtPrompt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="@string/strMovieName"
+        android:id="@+id/textView"
+        android:layout_above="@+id/btnDate"
+        android:layout_alignLeft="@+id/txtPrompt"
+        android:layout_alignStart="@+id/txtPrompt"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:id="@+id/txtMovieName"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignRight="@+id/btnDate"
+        android:layout_alignEnd="@+id/btnDate"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:hint="@string/hintMovieName" />
+
+</RelativeLayout>
